@@ -4,6 +4,8 @@ const hbs = require('hbs');
 const geoCode = require('./utils/geocode');
 const weather = require('./utils/weather');
 
+const port = process.env.PORT || 3001;
+
 
 console.log(__dirname);
 const publicDirPath = path.join(__dirname, '../public');
@@ -76,6 +78,6 @@ app.get('*', (req,res) => {
     res.render('404', {title:'Page not found', author:'Abhijeet'});
 })
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log("Server is up");
 });

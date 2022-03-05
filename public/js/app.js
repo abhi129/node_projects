@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', () => {
     console.log('testing');
 })
 
-fetch('http://localhost:3001/weather?address=mumbai').then((response) => {
+fetch('weather?address=mumbai').then((response) => {
     response.json().then((data) => {
         if (data.error) {
             console.log("No data");
